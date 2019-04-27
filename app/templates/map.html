@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+	<script type="text/javascript">
+		let map;
+		// global array to store the marker object 
+
+		function initMap() {
+		  map = new google.maps.Map(document.getElementById('map'), {
+		    center: {lat: 33.684, lng: 73.0479},
+		    zoom: 12
+		  });
+
+
+		function createMarker(pos, t, color) {
+		    var marker = new google.maps.Marker({       
+		        position: pos, 
+		        map: map,  // google.maps.Map 
+		        title: t,
+		        icon: {
+		          url: "http://maps.google.com/mapfiles/ms/icons/" + color +"-dot.png"
+		        }      
+		    }); 
+		    google.maps.event.addListener(marker, 'click', function() { 
+		       window.open("/location/" + t); 
+		    }); 
+		    return marker;  
+		}
+
+		{% for a,b,c in data %}
+			marker = createMarker({{a}}, {{b|tojson}}, {{c|tojson}});
+		{% endfor %}
+
+		}
+
+	</script>
+
+	<div class="jumbotron mapBox">
+		<h1 id="h11"><i class="fa fa-globe" aria-hidden="true"></i> <i>Map</i></h1>
+		<div id="map" style="min-height: 400px;"></div>
+
+		<script async defer
+	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcOf3GLe78ZNRLIEOxZ9zzzWMnYXo5tiQ&callback=initMap">>
+    	</script>
+		
+	</div>
+	
+
+
+
+{% endblock %}

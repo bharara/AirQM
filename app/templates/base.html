@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+      {% if title %}
+      	<title>{{ title }} - AQM</title>
+      {% else %}
+      	<title>Welcome to AQM</title>
+      {% endif %}
+	
+	<meta charset="utf-8">
+
+
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='home.css')}}">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+    
+<body class = "{{cl}}">
+
+    <!--Heading Of Website and Navigation-->
+	<header>
+		<!--Navigation-->
+		<nav class="navbar navbar-inverse navbar-fixed-top"> 
+
+		<div class="container">
+			<div class="navbar-header">
+				
+				<a href="/" class="navbar-brand" id="AQM"><i class="fa fa-assistive-listening-systems" aria-hidden="true"></i> Home</a>
+
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded ="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>	
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-nav-demo">
+
+				<ul class="nav navbar-nav">
+					<li><a href="{{ url_for('Map') }}"><i class="fa fa-globe" aria-hidden="true"></i> Map</a></li>
+					<li><a href=""><i class="fa fa-envira" aria-hidden="true"></i> Gasses</a></li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="about.html"><i class="fa fa-list" aria-hidden="true"></i> About</a></li>
+					<li><a href="login.html">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+			
+				</ul>
+				
+
+			</div>
+		
+		</div>
+
+	</nav>
+
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	</header>
+
+	<div class="container container1">
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>
