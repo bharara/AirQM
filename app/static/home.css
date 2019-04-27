@@ -10,8 +10,6 @@
 	height:100%; 
 
 }
-
-
 .navbar-inverse {
 	background-color: rgb(112,128,144);
 	border-radius:0px 0px 200px 200px;
@@ -44,13 +42,7 @@
 .container1{
 	margin-top: 58px;
 }
-.jumbotron{
-	margin-left: 20px;
-	margin-right: 0px;
-	height:100px;
-	padding-top: 30px;
-	
-}
+
 
 #h1{
 	margin-top: 0%;
@@ -60,6 +52,10 @@
 }
 
 #j1{
+	margin-left: 20px;
+	margin-right: 0px;
+	height:100px;
+	padding-top: 30px;
 	border-radius:100px 100px 200px 200px;
 }
 
@@ -71,3 +67,31 @@
 #toggle_button{
 	margin-right: 30px;
 }
+
+/*for user login page*/
+#j2{
+	 width:50%;
+  	 margin:0 auto;
+     margin-top:2%;
+     background-color: rgb(119,136,153);
+}
+
+#c2{
+
+ margin-top: 1%;
+}
+
+#button{
+	background-color: #bdc3c7;
+	border:none;
+}
+
+#username{
+	color: white;
+}
+
+#password{
+
+	color:white;
+}
+/*End user login page*/
