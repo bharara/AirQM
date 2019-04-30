@@ -1,0 +1,232 @@
+.map{
+
+	background-color: #bdc3c7
+
+}
+
+.mapBox{
+
+	width:100%;
+	height:100%; 
+	text-align: center;
+
+}
+.navbar-inverse {
+	background-color: rgb(112,128,144);
+	border-radius:0px 0px 200px 200px;
+	
+	
+}
+
+
+.navbar-inverse .navbar-brand{
+	color:white;
+	/*font-size: 20px;
+	margin-top: 19px;*/
+
+}
+.navbar-inverse .navbar-collapse ul li a{
+	color:white;
+	/*font-size: 20px;
+	margin-top: 25px;*/
+}
+
+.navbar-inverse .navbar-collapse ul li a:hover {
+	background-color: rgb(119,136,153);
+
+}
+
+#AQM:hover {
+	background-color: rgb(119,136,153);
+}
+
+#c1{
+	margin-top: 58px;
+}
+
+
+h1 {
+	margin-top: 0%;
+	font-size: 40px;
+	text-align: center;
+	text-align: middle;
+}
+
+#j1{
+	margin-left: 20px;
+	margin-right: 0px;
+	height:100px;
+	padding-top: 30px;
+	border-radius:100px 100px 200px 200px;
+}
+
+.radius1{
+
+	border-radius:15px;
+}
+
+#toggle_button{
+	margin-right: 30px;
+}
+
+/*for user login page*/
+#j2{
+	 width:50%;
+  	 margin:0 auto;
+     margin-top:2%;
+     background-color: rgb(119,136,153);
+}
+
+#c2{
+
+ margin-top: 1%;
+}
+
+#button{
+	background-color: #bdc3c7;
+	border:none;
+}
+
+#username{
+	color: white;
+}
+
+#password{
+
+	color:white;
+}
+/*End user login page*/
+
+/*About Page*/
+
+#j3{
+
+	background-color: rgb(119,136,153); 
+    
+	width: 100%;
+	color:white;
+	height: 90px;
+
+}
+
+#c3{
+
+	width: 100%;
+	margin-left: 0;
+	background-color: rgb(119,136,153); 
+	border-radius:0px 0px 180px 180px;
+	
+
+}
+
+#c4{
+	margin-top:10px;
+}
+
+#j4{
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+/*About end*/
+
+/*location*/
+
+#c5{
+	
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#j5{
+	width: 100%;
+	margin-top:5%;
+	margin-left: 1%;
+	height:100px;
+	border-radius: 100px 100px 100px 100px;
+	padding-top: 1px;
+}	
+
+#j6{
+	width:100%;
+	height:100%;
+}
+
+#c7{
+	margin-top: 2%;
+}
+
+.col-md-1{
+	border:2px solid #ddd; 
+	text-align: center;
+	font-weight: bold;
+
+}
+
+.col-md-1:hover{
+	background-color: #ddd;
+	padding-right: 0px;
+}
+
+.left-row{
+	margin-left: 10%;
+}
+
+.back_ground_color{
+	background-color:#f2f2f2;
+}
+
+
+
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: black;
+  color: white;
+}
+
+/*location end*/
+
+/*home images*/
+
+.img_row_1{
+
+	margin-top: 4%;
+	margin-left: 8%;
+	margin-right: 8%;
+}
+
+.frontpagepictext{
+	text-align: center;
+}
+h5{
+	font-weight: bold;
+}
+.frontpageiconsdivs{
+	margin-top: 30px;
+	
+}
+.frontpageiconsdivs a{
+	color:darkslategray;
+	font-family: 'Bitter', serif;
+}
+
+.img{
+	width: 100%;
+}

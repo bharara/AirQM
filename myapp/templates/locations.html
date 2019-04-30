@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+    <br>
+
+    <br>
+
+
+    <div class="container" id="c5">
+
+    <div class="jumbotron" id="j5">
+      
+          <h1> List of our Sensor Locations </h1>
+    </div>
+  </div>
+
+<!--  First container: -->
+
+  <div class="container" id="c6">
+
+    <ul style = "margin:0 auto;">
+    {% for name in list: %}
+    	<li style = "font-size: 20px; text-decoration: none"> <a href = "/locations/{{name.replace(' ', '%20')}}"> {{name.upper()}} </a></li>
+    {% endfor %}
+	</ul>
+
+</div>
+{% endblock %}

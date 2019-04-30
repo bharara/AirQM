@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+    <div class="container" id="c5">
+
+    <div class="jumbotron" id="j5">
+      
+      <h1 style="text-align: center;"><i class="fa fa-map-marker" aria-hidden="true"></i> {{loc.name.upper()}}</h1>
+    </div>
+  </div>
+
+<!--  First container: -->
+
+        <script type="text/javascript">
+    let map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {{loc.cord}},
+        zoom: 12
+      });
+
+      var r = "http://maps.google.com/mapfiles/ms/icons/" + "{{loc.color}}" + "-dot.png"
+      let marker = new google.maps.Marker({
+        map: map,
+        position: {{loc.cord}},
+        
+        icon: {
+          url: r
+        }
+      });
+    }
+
+  </script>
+
+  <div class="container" id="c6">
+
+    
+    <div class="row">
+
+      <div class="col-md-6">
+
+  <div id="map"></div>
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcOf3GLe78ZNRLIEOxZ9zzzWMnYXo5tiQ&callback=initMap">>
+  </script>
+
+      </div>
+
+      <div class="col-md-6">
+          <a href = "{{loc.link}}" style="margin-left:28%; width:60%" type="submit" class="btn btn-primary btn-lg">
+          Download Data </a>
+        </div>
+      
+    </div>
+
+<table style="margin-left: 55%; width:50%;"id="customers">
+  <tr>
+    <div style=" font-size: 25px; text-align: center; width:50%; margin-left: 55%;  border: 1px solid #ddd;
+  padding: 8px; font-weight: bold;"><i class="fa fa-medkit" aria-hidden="true"></i> AQI</div>
+  </tr>
+  <tr>
+    <th></th>
+    <th>This</th>
+    <th>Last</th>
+    <th>Trend</th>
+  </tr>
+
+
+    {% for d in loc.getAQIData(): %}
+      <tr>
+      {% for s in d: %}
+        <td> {{s}} </td>
+      {% endfor %}
+      </tr>
+    {% endfor %}
+
+</table>
+
+<!-- Second Conatiner: -->
+
+
+<table style="margin-bottom: 2%" id="customers">
+  <tr>
+    <div style=" font-size: 25px; text-align: center; margin-top: 2%;  border: 1px solid #ddd; font-weight: bold;
+  padding: 8px;"><i class="fa fa-table" aria-hidden="true"></i> Data</div>
+  </tr>
+
+  <tr>
+    <th>CO2</th>
+    <th>PM25</th>
+    <th>Ozone</th>
+    <th>SO2</th>
+    <th>NO2</th>
+    <th>Time</th>
+  </tr>
+
+  {% for a in loc.getDataPoints(50) %}
+    <tr>
+      {% for b in a %}
+      <td> {{b}} </td>
+      {% endfor %}
+    </tr>
+  {% endfor %}
+
+</table>
+
+{% endblock %}

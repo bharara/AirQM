@@ -23,25 +23,31 @@
 		        }      
 		    }); 
 		    google.maps.event.addListener(marker, 'click', function() { 
-		       window.open("/location/" + t); 
+		       window.open("/locations/" + t.replace(/ /g,"%20")); 
 		    }); 
 		    return marker;  
 		}
 
-		{% for a,b,c in data %}
-			marker = createMarker({{a}}, {{b|tojson}}, {{c|tojson}});
+		{% for loc in lst %}
+			marker = createMarker({{loc.cord}}, {{loc.name|tojson}}, {{loc.color|tojson}});
 		{% endfor %}
 
 		}
 
 	</script>
 
-	<div class="jumbotron mapBox">
-		<h1 id="h11"><i class="fa fa-globe" aria-hidden="true"></i> <i>Map</i></h1>
-		<div id="map" style="min-height: 400px;"></div>
+
+		<div class="jumbotron" id="mapBox">
+		
+				<div> <h1> <i style="font-size: 100px; margin-left: 0px; padding-left: 0px;" class="fa fa-globe" aria-hidden="true"></i>Map </h1>
+
+			{% include "dateform.html" %}
+
+			</div>
+			<div id="map" style="min-height: 400px; width: 100%"></div>
 
 		<script async defer
-	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcOf3GLe78ZNRLIEOxZ9zzzWMnYXo5tiQ&callback=initMap">>
+	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvGUfldNuxLtJNKuHKugpQAiSXJLoHR94&callback=initMap">>
     	</script>
 		
 	</div>

@@ -38,12 +38,12 @@
 
 				<ul class="nav navbar-nav">
 					<li><a href="{{ url_for('Map') }}"><i class="fa fa-globe" aria-hidden="true"></i> Map</a></li>
-					<li><a href=""><i class="fa fa-envira" aria-hidden="true"></i> Gasses</a></li>
+					<li><a href="{{ url_for('Pollutants') }}"><i class="fa fa-envira" aria-hidden="true"></i> Pollutants</a></li>
+					<li><a href="{{ url_for('Locations') }}"><i class="fa fa-map-marker" aria-hidden="true"></i> Locations</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="about.html"><i class="fa fa-list" aria-hidden="true"></i> About</a></li>
-					<li><a href="login.html">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+					<li><a href="{{ url_for('About') }}"><i class="fa fa-list" aria-hidden="true"></i> About</a></li>
 			
 				</ul>
 				
